@@ -1,0 +1,144 @@
+import Link from "next/link";
+
+const BRAND_COLOR = "#D94500";
+const BG_COLOR = "#000000";
+
+export default function Footer() {
+  return (
+    <footer className="w-full text-white" style={{ backgroundColor: BG_COLOR }}>
+      <div className="mx-auto max-w-7xl px-6 py-12 md:px-10 lg:px-16">
+
+        {/* ===== TOP GRID ===== */}
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
+
+          {/* Brand */}
+          <div>
+            <img
+              src="/shraddha-logo-navbar.svg"
+              alt="Shraddha Logo"
+              className="mb-4 h-9"
+            />
+
+            <p className="text-base leading-relaxed text-gray-400">
+              India&apos;s premier{" "}
+              <span className="font-semibold text-white">
+                Software Solutions company
+              </span>{" "}
+              delivering innovative, scalable, and secure digital solutions.
+              We help businesses grow with{" "}
+              <span className="font-semibold text-white">
+                cutting-edge technology and expert development services
+              </span>
+              .
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4
+              className="mb-4 text-base font-bold uppercase tracking-wide"
+              style={{ color: BRAND_COLOR }}
+            >
+              Quick Links
+            </h4>
+            <ul className="space-y-2 text-base">
+              <FooterLink href="/">Home</FooterLink>
+              <FooterLink href="/about">About Us</FooterLink>
+              <FooterLink href="/contact">Contact Us</FooterLink>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4
+              className="mb-4 text-base font-bold uppercase tracking-wide"
+              style={{ color: BRAND_COLOR }}
+            >
+              Our Services
+            </h4>
+            <ul className="space-y-2 text-base">
+              <FooterLink href="/webservices">Web Development</FooterLink>
+              <FooterLink href="/appdevelopment">App Development</FooterLink>
+              <FooterLink href="/digitalmarketing">Digital Marketing</FooterLink>
+              <FooterLink href="/bootcamp">Bootcamps</FooterLink>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4
+              className="mb-4 text-base font-bold uppercase tracking-wide"
+              style={{ color: BRAND_COLOR }}
+            >
+              Contact Us
+            </h4>
+            <ul className="space-y-2 text-base text-gray-400">
+              <li className="leading-relaxed">
+                24 Munekolala 3rd Cross, Ayyappa Layout, Marathahalli Bridge,
+                Bangalore – 560037
+              </li>
+              <li className="font-medium text-white">
+                <a href="tel:+919390519099">+91 9390519099</a>
+              </li>
+              <li className="font-medium text-white">
+                <a href="mailto:info@shraddha.org.in">
+                  info@shraddha.org.in
+                </a>
+              </li>
+              <li>Mon – Sat: 9:00 AM – 7:00 PM</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* ===== BOTTOM BAR ===== */}
+        <div className="mt-8 pt-4 border-t border-gray-800 flex justify-end">
+          <div className="text-sm md:text-base text-gray-400 text-right space-y-1">
+            <p>
+              © 2025{" "}
+              <span className="font-semibold text-white">Shraddha</span>. All
+              rights reserved.
+            </p>
+
+            <div className="flex justify-end space-x-6">
+              <Link
+                href="/privacy-policy"
+                className="font-medium hover:text-white transition"
+              >
+                Privacy Policy
+              </Link>
+
+              <Link
+                href="/terms"
+                className="font-medium hover:text-white transition"
+              >
+                Terms of Service
+              </Link>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  );
+}
+
+/* ===== Footer Link Component ===== */
+
+function FooterLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <li>
+      <Link
+        href={href}
+        className="font-medium text-gray-400 hover:text-white transition"
+      >
+        {children}
+      </Link>
+    </li>
+  );
+}
