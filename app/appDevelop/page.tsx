@@ -14,7 +14,7 @@ const AppDevelop = () => {
   description = "We build innovative, user-friendly mobile applications that engage users and drive business growth. From concept to deployment, our development team creates custom solutions for iOS and Android platforms."
   primaryBtnText = "Discuss Your Project"
   primaryBtnLink = "#"
-  imageSrc = "/image_3bf766.png"
+  imageSrc = "/appService-top-right.jpeg"
 />
         <AppDevelopmentServicesSection/>
         <AppDevelopmentStack/>

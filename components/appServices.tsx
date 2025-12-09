@@ -15,7 +15,6 @@ import {
 // --- Types ---
 interface Service {
   title: string;
-  href: string;
   icon: LucideIcon;
   description: string;
   features: string[];
@@ -25,7 +24,6 @@ interface Service {
 const SERVICES_DATA: Service[] = [
   {
     title: "Native App Development",
-    href: "/appservices/native",
     icon: Smartphone,
     description:
       "High-performance native applications for iOS and Android platforms with platform-specific features and optimal user experience.",
@@ -37,7 +35,6 @@ const SERVICES_DATA: Service[] = [
   },
   {
     title: "Cross-Platform Development",
-    href: "/appservices/cross-platform",
     icon: Layers,
     description:
       "Cost-effective cross-platform solutions using React Native and Flutter that maintain native-like performance and feel.",
@@ -49,7 +46,7 @@ const SERVICES_DATA: Service[] = [
   },
   {
     title: "UI/UX Design",
-    href: "/appservices/ui-ux",
+
     icon: PenTool,
     description:
       "Intuitive, engaging user interfaces with seamless user experiences that keep your audience coming back.",
@@ -61,7 +58,7 @@ const SERVICES_DATA: Service[] = [
   },
   {
     title: "Backend Development",
-    href: "/appservices/backend",
+
     icon: Server,
     description:
       "Robust, scalable backend solutions and APIs that power your mobile applications with reliable performance.",
@@ -73,7 +70,7 @@ const SERVICES_DATA: Service[] = [
   },
   {
     title: "App Maintenance & Support",
-    href: "/appservices/maintenance",
+
     icon: Wrench,
     description:
       "Continuous updates, bug fixes, and performance optimizations to keep your app running smoothly.",
@@ -85,7 +82,6 @@ const SERVICES_DATA: Service[] = [
   },
   {
     title: "App Store Optimization",
-    href: "/appservices/aso",
     icon: TrendingUp,
     description:
       "Strategic optimization to improve visibility and increase downloads in the App Store and Google Play.",
@@ -102,8 +98,8 @@ const ServiceCard = ({ service }: { service: Service }) => {
   const Icon = service.icon;
 
   return (
-    <div className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-      
+    <div className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ">
+
       {/* animated moving lines */}
       <span className="pointer-events-none absolute inset-0">
         <span className="absolute top-0 left-0 h-[2px] w-full bg-[#F54E02] translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
@@ -128,7 +124,7 @@ const ServiceCard = ({ service }: { service: Service }) => {
       {/* Features */}
       <ul className="relative space-y-3 mb-6">
         {service.features.map((feature, index) => (
-          <li key={index} className="flex items-start text-gray-800">
+          <li key={index} className="flex items-start text-gray-800 transition-all duration-300 hover:translate-x-2">
             <CheckCircle
               size={18}
               className="text-[#F54E02] mr-2 mt-1"
@@ -138,13 +134,7 @@ const ServiceCard = ({ service }: { service: Service }) => {
         ))}
       </ul>
 
-      {/* CTA */}
-      <Link
-        href={service.href}
-        className="relative inline-block mt-auto px-6 py-3 text-sm font-medium rounded-md border border-[#F54E02] text-[#F54E02] transition-all duration-300 hover:bg-[#F54E02] hover:text-white"
-      >
-        Learn More
-      </Link>
+
     </div>
   );
 };
@@ -153,10 +143,11 @@ const ServiceCard = ({ service }: { service: Service }) => {
 export default function AppDevelopmentServicesSection() {
   return (
     <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        
+      <div className="max-w-1xl mx-auto px-6 lg:px-18">
+
         {/* Header */}
         <div className="text-center mb-16">
+          <span className="inline-block bg-[#ff4500] w-12 h-[3px] mb-2"></span>
           <h2 className="text-4xl font-bold text-black mb-3">
             App Development Services
           </h2>
@@ -175,7 +166,7 @@ export default function AppDevelopmentServicesSection() {
         {/* CTA */}
         <div className="text-center mt-20">
           <Link
-            href="#"
+            href="/contact"
             className="inline-block px-10 py-4 rounded-lg font-semibold text-lg bg-[#F54E02] text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
             Request a Free Consultation

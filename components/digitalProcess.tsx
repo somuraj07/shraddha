@@ -76,13 +76,10 @@ const ProcessStepCard = ({ step }: { step: ProcessStep }) => {
 export default function DigitalMarketingProcessSection() {
   return (
     <section className="py-20 bg-white" id="digital-marketing-process">
-      <div className="container mx-auto px-6 lg:px-8">
+      <div className="container mx-auto px-6 lg:px-18">
         {/* Header */}
         <div className="text-center mb-16">
-          <div
-            className="w-12 h-1 mx-auto mb-3"
-            style={{ backgroundColor: BRAND_COLOR }}
-          />
+          <span className="inline-block bg-[#ff4500] w-12 h-[3px] mb-2"></span>
           <h2 className="text-4xl font-extrabold text-gray-900 mb-3">
             Our Process
           </h2>
@@ -100,22 +97,21 @@ export default function DigitalMarketingProcessSection() {
             ))}
           </div>
 
-          {/* Right Image */}
           <motion.div
-            className="relative lg:w-1/2 flex justify-center mt-12 lg:mt-0"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="relative lg:w-1/2 flex justify-end mt-12 lg:mt-0"
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            style={{ transformOrigin: "bottom" }}
           >
-            <div className="relative max-w-lg w-full overflow-hidden rounded-xl shadow-[0_25px_60px_rgba(0,0,0,0.25)]">
+            <div className="relative max-w-lg w-full overflow-hidden rounded-xl">
               <img
-                src="/images/digital-marketing.png" // replace with your PNG
+                src="/digital-process-right.jpg"
                 alt="Digital Marketing"
                 className="w-full h-[520px] object-cover"
               />
-              {/* Dark overlay */}
-              <div className="absolute inset-0 bg-black/20" />
+
               {/* Side label */}
               <div className="absolute top-0 bottom-0 -left-20 w-20 bg-black flex items-center justify-center">
                 <span className="text-white font-extrabold text-4xl tracking-[0.5rem] rotate-90 uppercase">
@@ -124,6 +120,7 @@ export default function DigitalMarketingProcessSection() {
               </div>
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>

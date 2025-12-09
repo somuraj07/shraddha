@@ -44,8 +44,8 @@ export default function WebServiceStack() {
         "w-[70px] h-[70px] p-4 bg-[rgba(245,78,2,0.1)] rounded-xl mb-3 transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-[rgba(245,78,2,0.2)]";
 
     return (
-        <section className="py-16 bg-[#1c1f23] px-20">
-            <div className="container mx-auto px-4">
+        <section className="py-16 bg-[#1c1f23] py-6">
+            <div className="container mx-auto px-6 lg:px-18">
 
                 {/* HEADER */}
                 <div className="text-center mb-10">

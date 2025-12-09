@@ -44,43 +44,59 @@ export default function AppDevelopmentStack() {
 
   return (
     <section className="py-16 bg-[#f8f9fa]">
-      <div className="container mx-auto px-30">
+      <div className="container mx-auto px-6 lg:px-18">
+        
         {/* Heading */}
         <div className="text-center mb-10">
           <span className="inline-block bg-[#ff4500] w-12 h-[3px]"></span>
-
           <h2 className="mt-3 text-3xl md:text-4xl font-fredoka">
             Platforms & <span className="font-bold">Technologies</span>
           </h2>
-
           <p className="text-gray-600 max-w-xl mx-auto mt-2">
             We use the latest technologies to build high-quality mobile
             applications
           </p>
         </div>
 
-        {/* Platform Icons */}
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-6 text-center">
-          {platforms.map((p) => (
-            <div key={p.name} className="flex flex-col items-center">
-              <div
-                className="
-                  w-[70px] h-[70px] bg-white rounded-2xl shadow-md 
-                  flex items-center justify-center mb-3
-                  transition-all duration-300 hover:-translate-y-1 hover:shadow-xl
-                "
-              >
-                <Image
-                  src={p.icon}
-                  alt={p.name}
-                  width={40}
-                  height={40}
-                  className="object-contain"
-                />
+        {/* Infinite Loop */}
+        <div className="overflow-hidden py-6 mt-8 relative group">
+          <style>{`
+            @keyframes scrollLeft {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .loop {
+              display: flex;
+              animation: scrollLeft 15s linear infinite;
+            }
+            .group:hover .loop {
+              animation-play-state: paused;
+            }
+          `}</style>
+
+          {/* Twice list → Perfect Seamless Loop */}
+          <div className="loop">
+            {[...platforms, ...platforms].map((p, i) => (
+              <div key={i} className="flex flex-col items-center min-w-[120px] mx-6">
+                <div
+                  className="
+                    w-[70px] h-[70px] bg-white rounded-2xl shadow-md 
+                    flex items-center justify-center mb-3
+                    transition-all duration-300 hover:-translate-y-1 hover:shadow-xl
+                  "
+                >
+                  <Image
+                    src={p.icon}
+                    alt={p.name}
+                    width={40}
+                    height={40}
+                    className="object-contain"
+                  />
+                </div>
+                <p className="font-semibold text-gray-800 text-sm">{p.name}</p>
               </div>
-              <p className="font-semibold text-gray-800 text-sm">{p.name}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Tech Pills */}
@@ -99,6 +115,7 @@ export default function AppDevelopmentStack() {
             </span>
           ))}
         </div>
+
       </div>
     </section>
   );
