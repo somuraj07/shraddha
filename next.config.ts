@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
       // webstack domains
       "cdn.jsdelivr.net",
       "avatars.githubusercontent.com",
+      "images.unsplash.com",
 
       // appStack domains
       "upload.wikimedia.org",
