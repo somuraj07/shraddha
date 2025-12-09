@@ -48,7 +48,7 @@ export default function AboutSection() {
           {/* Description */}
           <p className="text-lg lg:text-xl leading-relaxed">
             Shraddha is the premier destination for top-quality technical courses. 
-            As India's leading Edtech OTT platform, we provide a comprehensive range 
+            As India&apos;s leading Edtech OTT platform, we provide a comprehensive range 
             of technical courses under a single subscription model. Our programs are 
             designed to meet industry demands and provide students with practical 
             skills that employers value.

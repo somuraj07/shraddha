@@ -1,33 +1,27 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, Lightbulb, Handshake, Users, ChevronDown } from "lucide-react";
+import { Award, Lightbulb, Handshake, Users } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
 
 export default function AboutPage() {
-
   return (
     <div className="w-full bg-white">
 
       {/* ================= OUR STORY ================= */}
-      <section className="container mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
-        {/* Left Images */}
+      <section className="container mx-auto px-17 py-24 grid md:grid-cols-2 gap-12 items-center">
+        {/* Left Image */}
         <div className="relative">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="overflow-hidden rounded-xl shadow-lg"
-          >
+          {/* Removed Hover + Removed Shadow */}
+          <motion.div className="overflow-hidden rounded-xl">
             <Image
-              src="/aboutus-section1-img.png"  // replace with your PNG
+              src="/aboutus-section1-img.png"
               alt="Team Discussion"
               width={500}
               height={500}
               className="object-cover"
             />
           </motion.div>
-
-          
 
           {/* Orange Blob */}
           <div className="absolute -z-10 left-[-40px] top-[60px] w-64 h-64 bg-orange-500 rounded-[60%]" />
@@ -41,12 +35,14 @@ export default function AboutPage() {
             numerous engineering graduates each year, there was a significant
             gap between academic knowledge and industry requirements.
           </p>
+
           <p className="text-gray-600 mb-10 leading-relaxed">
             Founded by a team of technology professionals and educators,
             Shraddha provides targeted, practical training that focuses on
             real-world skills and workplace readiness.
           </p>
 
+          {/* Highlights */}
           <div className="flex gap-10">
             <div className="flex items-start gap-3">
               <div className="bg-orange-500 text-white p-3 rounded-full">
@@ -76,7 +72,7 @@ export default function AboutPage() {
       </section>
 
       {/* ================= CORE VALUES ================= */}
-      <section className="container mx-auto px-6 py-24 text-center">
+      <section className="container mx-auto px-25 py-14 text-center">
         <h2 className="text-4xl font-bold mb-4">Our Core Values</h2>
         <p className="text-gray-500 mb-12">
           The principles that guide our approach to education and business
@@ -125,6 +121,7 @@ export default function AboutPage() {
                   The team exceeded expectations and delivered exceptional
                   results with professionalism.
                 </p>
+
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center font-bold">
                     {name[0]}
@@ -134,15 +131,13 @@ export default function AboutPage() {
                     <p className="text-xs text-gray-400">Client</p>
                   </div>
                 </div>
+
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      
-
-    
     </div>
   );
 }
