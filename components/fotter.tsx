@@ -6,10 +6,10 @@ const BG_COLOR = "#000000";
 export default function Footer() {
   return (
     <footer className="w-full text-white" style={{ backgroundColor: BG_COLOR }}>
-      <div className="mx-auto max-w-7xl px-6 py-12 md:px-10 lg:px-16">
+      <div className="mx-auto max-w-11xl px-6 py-10 md:px-10 lg:px-18">
 
         {/* ===== TOP GRID ===== */}
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
 
           {/* Brand */}
           <div>
@@ -43,7 +43,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-base">
               <FooterLink href="/">Home</FooterLink>
-              <FooterLink href="/about">About Us</FooterLink>
+              <FooterLink href="/aboutt">About Us</FooterLink>
               <FooterLink href="/contact">Contact Us</FooterLink>
             </ul>
           </div>
@@ -57,9 +57,9 @@ export default function Footer() {
               Our Services
             </h4>
             <ul className="space-y-2 text-base">
-              <FooterLink href="/webservices">Web Development</FooterLink>
-              <FooterLink href="/appdevelopment">App Development</FooterLink>
-              <FooterLink href="/digitalmarketing">Digital Marketing</FooterLink>
+              <FooterLink href="/webs">Web Development</FooterLink>
+              <FooterLink href="/appDevelop">App Development</FooterLink>
+              <FooterLink href="/digital">Digital Marketing</FooterLink>
               <FooterLink href="/bootcamp">Bootcamps</FooterLink>
             </ul>
           </div>
@@ -74,9 +74,10 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-base text-gray-400">
               <li className="leading-relaxed">
-                24 Munekolala 3rd Cross, Ayyappa Layout, Marathahalli Bridge,
-                Bangalore – 560037
+                Ratan Tata Innovation Hub, JNTUA,
+                Anantapur, Andhra Pradesh – 515002
               </li>
+
               <li className="font-medium text-white">
                 <a href="tel:+919390519099">+91 9390519099</a>
               </li>
