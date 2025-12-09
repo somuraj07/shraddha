@@ -1,9 +1,9 @@
 "use client";
 
-import ContactPage from "@/components/contact";
 import DigitalMarketingProcessSection from "@/components/digitalProcess";
 import DigitalMarketingServicesSection from "@/components/digitalService";
 import HeroSection from "@/components/HeroSection";
+import ContactPage from "@/components/miniContact";
 import { motion } from "framer-motion";
 
 const Digital = () => {
@@ -50,7 +50,12 @@ const Digital = () => {
       </section>
 
       <DigitalMarketingProcessSection />
-      <ContactPage />
+       <ContactPage
+        title="Ready to grow your online presence?"
+        description="Contact us today for a custom digital marketing strategy."
+        buttonText="Get Started"
+        buttonLink="/contact"
+      />
     </div>
   );
 };

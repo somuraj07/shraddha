@@ -1,6 +1,6 @@
 "use client";
-import ContactPage from '@/components/contact'
 import HeroSection from '@/components/HeroSection';
+import ContactPage from '@/components/miniContact';
 import DevelopmentProcessSection from '@/components/webprocess'
 import WebServiceStack from '@/components/WebServiceStack';
 import BusinessServicesSection from '@/components/whiteService'
@@ -102,7 +102,12 @@ const Web = () => {
           </div>
         ))}
       </section>
-        <ContactPage/>
+        <ContactPage
+        title="Ready to build your website?"
+        description="Discuss your web project with us and get a free quote today."
+        buttonText="Start Your Project"
+        buttonLink="/contact"
+      />
     </div>
   )
 }

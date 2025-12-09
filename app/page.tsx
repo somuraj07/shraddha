@@ -3,8 +3,8 @@ import AboutSection from '@/components/aboutus'
 import Banner from '@/components/baneer'
 import React from 'react'
 import { motion } from "framer-motion";
-import ContactPage from '@/components/contact';
 import BusinessServicesSection from '@/components/services';
+import ContactPage from '@/components/miniContact';
 
 const Home = () => {
   return (
@@ -45,7 +45,12 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <ContactPage/>
+      <ContactPage
+        title="Ready to kickstart your journey?"
+        description="Let's discuss your ideas and make your vision a reality."
+        buttonText="Get Started"
+        buttonLink="/contact"
+      />
     </div>
   )
 }
