@@ -32,6 +32,8 @@ const team = [
     linkedin: "#",
     twitter: "#",
   },
+ 
+
 ];
 
 export default function TeamSection() {
@@ -80,12 +82,6 @@ export default function TeamSection() {
                     className="text-[#1f3a5f] hover:text-blue-600 transition"
                   >
                     <Linkedin size={18} />
-                  </a>
-                  <a
-                    href={member.twitter}
-                    className="text-[#1f3a5f] hover:text-black transition"
-                  >
-                    <X size={18} />
                   </a>
                 </div>
               </div>

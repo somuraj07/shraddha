@@ -21,34 +21,34 @@ const PARTNER_DATA = [
 export default function AboutSection() {
   return (
     <section 
-      className="py-18 px-8 lg:px-16"  // Increased padding around the section
+      className="py-18 px-8 lg:px-16"
       style={{ backgroundColor: PRIMARY_COLOR }}
     >
       <div className="container mx-auto flex flex-col lg:flex-row gap-12">
 
-        {/* Left Column: About Content */}
-        <div className="lg:w-1/2 text-white flex flex-col justify-center space-y-8"> {/* Increased spacing between items */}
+        {/* Left Column */}
+        <div className="lg:w-1/2 text-white flex flex-col justify-center space-y-8">
 
           {/* Quote */}
           <div className="flex items-center mb-6">
             <div className="w-12 h-1 bg-white rounded mr-4"></div>
-            <p className="italic text-lg opacity-90 leading-relaxed">
+            <p className="italic text-base opacity-90 leading-relaxed">
               “Don’t be afraid to give up the good to go for the great”
             </p>
           </div>
 
           {/* Titles */}
-          <h2 className="text-5xl lg:text-6xl font-extrabold" style={{ color: 'white' }}>
+          <h2 className="text-4xl lg:text-5xl font-extrabold text-white">
             About
           </h2>
-          <h3 className="text-4xl lg:text-5xl font-bold">
+          <h3 className="text-3xl lg:text-4xl font-bold">
             Shraddha
           </h3>
 
           {/* Description */}
-          <p className="text-lg lg:text-xl leading-relaxed">
+          <p className="text-base lg:text-lg leading-relaxed">
             Shraddha is the premier destination for top-quality technical courses. 
-            As India&apos;s leading Edtech OTT platform, we provide a comprehensive range 
+            As India's leading Edtech OTT platform, we provide a comprehensive range 
             of technical courses under a single subscription model. Our programs are 
             designed to meet industry demands and provide students with practical 
             skills that employers value.
@@ -57,33 +57,41 @@ export default function AboutSection() {
           {/* Know More Button */}
           <Link
             href="/about"
-            className="inline-block px-10 lg:px-12 py-4 rounded-lg font-bold text-lg lg:text-xl transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-1"
+            className="inline-block px-10 lg:px-12 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-1"
             style={{ backgroundColor: 'white', color: PRIMARY_COLOR }}
           >
             Know More
           </Link>
-
         </div>
 
-        {/* Right Column: Single Vertical Card */}
-        <div className="lg:w-1/2 flex justify-center">
+        {/* Right Column */}
+        <div className="lg:w-1/2 flex flex-col justify-start">
+
+          {/* Right Column Heading */}
+          <div className="flex items-center mb-4">
+            <div className="w-3 h-8 bg-white rounded mr-3"></div>
+            <h3 className="text-xl lg:text-2xl font-bold text-white">
+              Approved & Partnered With:
+            </h3>
+          </div>
+
           <div 
-            className="flex flex-col items-center p-8 lg:p-10 rounded-xl shadow-lg w-full gap-6" // Medium padding inside the main card
+            className="flex flex-col items-center p-8 lg:p-10 rounded-xl shadow-lg w-full gap-6"
             style={{ backgroundColor: CARD_SHADE }}
           >
             {PARTNER_DATA.map((partner, index) => (
               <div 
                 key={index} 
-                className="flex items-center w-full p-6 rounded-lg shadow-md bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1" // Medium padding inside partner cards
+                className="flex items-center w-full p-3 rounded-lg shadow-md bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
               >
-                <div className="w-16 h-16 flex items-center justify-center mr-4 flex-shrink-0">
+                <div className="w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">
                   <img
                     src={partner.logoSrc}
                     alt={partner.name}
                     className="h-full w-full object-contain"
                   />
                 </div>
-                <span className="text-gray-800 font-semibold text-base lg:text-lg">
+                <span className="text-gray-800 font-semibold text-xs lg:text-sm">
                   {partner.name}
                 </span>
               </div>
