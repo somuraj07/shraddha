@@ -16,8 +16,8 @@ const ContactPage: React.FC<ContactPageProps> = ({
   buttonLink,
 }) => {
   return (
-    <section className="py-24 bg-[#F54E02]">
-      <div className="container mx-auto px-6">
+    <section className="py-20 bg-[#F54E02]">
+      <div className="container mx-auto px-18">
         <div className="grid grid-cols-1 md:grid-cols-4 items-center gap-6">
           {/* Left 3 parts: Text */}
           <div className="md:col-span-3 text-white">
