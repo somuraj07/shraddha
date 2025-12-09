@@ -28,7 +28,7 @@ export default function ExactNavbarAligned() {
         className="fixed top-0 z-50 w-full"
         style={{ backgroundColor: BG_COLOR }}
       >
-        <div className="mx-auto flex h-20 max-w-7xl items-center px-6 md:px-10 lg:px-16">
+        <div className="mx-auto flex h-20 max-w-8xl items-center px-6 md:px-10 lg:px-16">
           
           {/* LEFT: Logo */}
           <div className="flex items-center">
@@ -66,7 +66,7 @@ export default function ExactNavbarAligned() {
                 </button>
 
                 {servicesOpen && (
-                  <div className="absolute top-full mt-2 w-56 rounded bg-black shadow-lg overflow-hidden">
+                  <div className="absolute top-full mt-2 w-55 rounded bg-black shadow-lg overflow-hidden">
                     {SERVICES.map((service) => (
                       <Link
                         key={service.name}
