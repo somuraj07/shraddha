@@ -45,18 +45,21 @@ export default function AppDevelopmentStack() {
   return (
     <section className="py-16 bg-[#f8f9fa]">
       <div className="container mx-auto px-6 lg:px-18">
-        
+
         {/* Heading */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-10 text-black">
           <span className="inline-block bg-[#ff4500] w-12 h-[3px]"></span>
+
           <h2 className="mt-3 text-3xl md:text-4xl font-fredoka">
             Platforms & <span className="font-bold">Technologies</span>
           </h2>
-          <p className="text-gray-600 max-w-xl mx-auto mt-2">
+
+          <p className="max-w-xl mx-auto mt-2 text-black">
             We use the latest technologies to build high-quality mobile
             applications
           </p>
         </div>
+
 
         {/* Infinite Loop */}
         <div className="overflow-hidden py-6 mt-8 relative group">

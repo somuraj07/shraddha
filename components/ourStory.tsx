@@ -69,41 +69,47 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ================= CORE VALUES ================= */}
-      <section className="container mx-auto px-6 md:px-16 py-20 text-center">
-        <h2 className="text-4xl font-bold mb-4">Our Core Values</h2>
-        <p className="text-gray-500 mb-12 max-w-2xl mx-auto">
-          The principles that guide our approach to education and business
-        </p>
+   <section className="container mx-auto px-17 md:px-16 py-10 text-center">
+      <h2 className="text-4xl font-bold mb-4 text-black">
+        Our Core Values
+      </h2>
 
-        <div className="grid md:grid-cols-4 gap-8">
-          {[
-            { icon: <Award size={24} />, title: "Excellence" },
-            { icon: <Lightbulb size={24} />, title: "Innovation" },
-            { icon: <Handshake size={24} />, title: "Integrity" },
-            { icon: <Users size={24} />, title: "Community" },
-          ].map((item, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ y: -10 }}
-              transition={{ duration: 0.3 }}
-              className="bg-white rounded-xl p-8 shadow hover:shadow-xl transition"
-            >
-              <div className="bg-orange-500 text-white w-14 h-14 mx-auto flex items-center justify-center rounded-full mb-4">
-                {item.icon}
-              </div>
-              <h3 className="font-semibold text-lg">{item.title}</h3>
-              <p className="text-gray-500 mt-3 text-sm">
-                We focus on delivering the highest value in everything we do.
-              </p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+      <p className="text-gray-500 mb-12 max-w-2xl mx-auto">
+        The principles that guide our approach to education and business
+      </p>
+
+      <div className="grid md:grid-cols-4 gap-8">
+        {[
+          { icon: <Award size={24} />, title: "Excellence" },
+          { icon: <Lightbulb size={24} />, title: "Innovation" },
+          { icon: <Handshake size={24} />, title: "Integrity" },
+          { icon: <Users size={24} />, title: "Community" },
+        ].map((item, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ y: -10 }}
+            transition={{ duration: 0.3 }}
+            className="bg-white rounded-xl p-8 shadow hover:shadow-xl transition"
+          >
+            <div className="bg-orange-500 text-white w-14 h-14 mx-auto flex items-center justify-center rounded-full mb-4">
+              {item.icon}
+            </div>
+
+            <h3 className="font-semibold text-lg text-black">
+              {item.title}
+            </h3>
+
+            <p className="text-gray-500 mt-3 text-sm">
+              We focus on delivering the highest value in everything we do.
+            </p>
+          </motion.div>
+        ))}
+      </div>
+    </section>
 
       {/* ================= TESTIMONIALS ================= */}
-      <section className="bg-[#1C1F24] py-24">
-  <div className="container mx-auto px-6 text-white">
+      <section className="bg-[#1C1F24] py-12">
+  <div className="container mx-auto px-17 text-white">
     {/* Heading */}
     <h2 className="text-4xl font-bold text-center mb-4">
       Client <span className="text-orange-500">Testimonials</span>

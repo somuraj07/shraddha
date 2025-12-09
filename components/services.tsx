@@ -38,7 +38,7 @@ const ServiceCard: React.FC<{ service: Service }> = ({ service }) => {
   return (
     <div
       className="
-        relative flex flex-col px-6 py-8 rounded-lg shadow-xl 
+        relative flex flex-col px-18 py-8 rounded-lg shadow-xl 
         bg-[#1c1f21] transition-all duration-300 overflow-hidden
         border border-[#1c1f21] 
         hover:border-[#F54E02]
