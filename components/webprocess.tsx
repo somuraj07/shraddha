@@ -71,8 +71,8 @@ const ProcessStepCard = ({ step }: { step: ProcessStep }) => {
 
 export default function DevelopmentProcessSection() {
   return (
-    <section className="py-20 bg-white" id="development-process">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section className="py-20 bg-[#f8f9fa]" id="development-process">
+      <div className="container mx-auto px-6 lg:px-18">
 
         {/* Header */}
         <div className="text-center mb-16">
@@ -95,17 +95,14 @@ export default function DevelopmentProcessSection() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-16">
 
           {/* Image Section */}
-          <div className="relative lg:w-1/2 flex justify-center mb-12 lg:mb-0">
-            <div className="relative max-w-lg w-full overflow-hidden rounded-xl shadow-[0_25px_60px_rgba(0,0,0,0.25)]">
+          <div className="relative lg:w-1/2 flex justify-start mb-12 lg:mb-0">
+            <div className="relative max-w-lg w-full overflow-hidden  ">
 
               <img
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                src="/landing2-right-bottom-new-1.png"
                 alt="Presentation"
                 className="w-full h-[520px] object-cover"
               />
-
-              {/* Dark overlay */}
-              <div className="absolute inset-0 bg-black/20" />
 
               {/* Side black label */}
               <div className="absolute top-0 bottom-0 -left-20 w-20 bg-black flex items-center justify-center">

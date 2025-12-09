@@ -14,7 +14,6 @@ import {
 // --- Types ---
 interface Service {
   title: string;
-  href: string;
   icon: LucideIcon;
   description: string;
   features: string[];
@@ -24,85 +23,80 @@ interface Service {
 const SERVICES_DATA: Service[] = [
   {
     title: "Custom Website Development",
-    href: "/webservices/custom-website-development",
     icon: Code,
     description:
-      "Bespoke website solutions designed to meet your specific business requirements. We build custom websites that stand out from the crowd.",
+      "Tailored website solutions built to match your brand, deliver performance, and support future growth.",
     features: [
-      "Unique design tailored to your brand identity",
-      "Clean, efficient code for optimal performance",
-      "Scalable architecture for future growth",
+      "Custom brand-focused design",
+      "Clean and fast-coded build",
+      "Fully scalable project structure",
     ],
   },
   {
     title: "E-Commerce Solutions",
-    href: "/webservices/ecommerce-solutions",
     icon: Smartphone,
     description:
-      "Powerful online stores that drive sales and provide exceptional shopping experiences for your customers.",
+      "High-performance online stores designed to boost sales and enhance customer shopping experiences.",
     features: [
-      "Secure payment gateway integration",
-      "Inventory management systems",
-      "Customer account management",
+      "Secure payment gateway setup",
+      "Advanced inventory control system",
+      "Smooth customer account handling",
     ],
   },
   {
     title: "Responsive Web Design",
-    href: "/webservices/responsive-web-design",
     icon: Layout,
     description:
-      "Websites that look and function perfectly on all devices, from desktops to smartphones and tablets.",
+      "Fully responsive websites that work smoothly across desktops, tablets, and mobile devices.",
     features: [
-      "Mobile-first design approach",
-      "Consistent user experience across all devices",
-      "Fast loading times on mobile networks",
+      "Mobile-first responsive layout",
+      "Consistent user-friendly experience",
+      "Optimized fast-loading pages",
     ],
   },
   {
     title: "CMS Integration",
-    href: "/webservices/cms-integration",
     icon: Layout,
     description:
-      "Easy-to-use content management systems that give you full control over your website's content.",
+      "Content management systems that give you full control with simple, user-friendly admin tools.",
     features: [
-      "WordPress, Drupal, and custom CMS solutions",
-      "User-friendly admin interfaces",
-      "Training and support for your team",
+      "WordPress and custom CMS setups",
+      "Easy-to-use admin interface",
+      "Detailed training and guidance",
     ],
   },
   {
     title: "SEO Optimization",
-    href: "/webservices/seo-optimization",
     icon: Search,
     description:
-      "Websites built with search engines in mind to help your business rank higher in search results.",
+      "Optimized websites designed to increase visibility, rank higher, and attract more organic traffic.",
     features: [
       "SEO-friendly code structure",
-      "Fast page loading speeds",
-      "Mobile optimization for better rankings",
+      "Fast and stable performance",
+      "Mobile-optimized ranking boost",
     ],
   },
   {
     title: "Website Maintenance",
-    href: "/webservices/website-maintenance",
     icon: Wrench,
     description:
-      "Ongoing support and maintenance to keep your website secure, up-to-date, and performing at its best.",
+      "Ongoing updates, security improvements, and performance optimization to keep your site running smoothly.",
     features: [
-      "Regular security updates and patches",
-      "Performance monitoring and optimization",
-      "Content updates and feature additions",
+      "Regular security patch updates",
+      "Continuous performance monitoring",
+      "Content and feature improvements",
     ],
   },
 ];
+
 
 // --- Service Card ---
 const ServiceCard = ({ service }: { service: Service }) => {
   const Icon = service.icon;
 
   return (
-    <div className="group relative rounded-xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-      
+    <div className="group relative bg-white shadow-lg p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+
       <div className="flex items-center mb-5">
         <Icon size={30} className="text-[#F54E02] mr-3" />
         <h3 className="text-xl font-semibold text-black">
@@ -116,19 +110,12 @@ const ServiceCard = ({ service }: { service: Service }) => {
 
       <ul className="space-y-3 mb-6">
         {service.features.map((feature, index) => (
-          <li key={index} className="flex items-start text-gray-800">
+          <li key={index} className="flex items-start text-gray-800 transition-all duration-300 hover:translate-x-2">
             <CheckCircle size={18} className="text-[#F54E02] mr-2 mt-1" />
             {feature}
           </li>
         ))}
       </ul>
-
-      <Link
-        href={service.href}
-        className="inline-block mt-auto px-6 py-3 text-sm font-medium rounded-md border border-[#F54E02] text-[#F54E02] transition-all duration-300 hover:bg-[#F54E02] hover:text-white"
-      >
-        Learn More
-      </Link>
     </div>
   );
 };
@@ -136,11 +123,12 @@ const ServiceCard = ({ service }: { service: Service }) => {
 // --- Main Section ---
 export default function BusinessServicesSection() {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        
+    <section className="py-24 bg-[#f8f9fa]">
+      <div className="max-w-2rem mx-auto px-6 lg:px-18">
+
         {/* Header (CONTENT REPLACED) */}
         <div className="text-center mb-16">
+          <span className="inline-block bg-orange-600 w-14 h-[3px] mb-4"></span>
           <h2 className="text-4xl font-bold text-black mb-3">
             Our Web Development Services
           </h2>
@@ -159,7 +147,7 @@ export default function BusinessServicesSection() {
         {/* Bottom CTA */}
         <div className="text-center mt-20">
           <Link
-            href="#"
+            href="/contact"
             className="inline-block px-10 py-4 rounded-lg font-semibold text-lg bg-[#F54E02] text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
             Request a Free Consultation

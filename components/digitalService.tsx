@@ -15,7 +15,6 @@ import {
 // --- Types ---
 interface Service {
   title: string;
-  href: string;
   icon: LucideIcon;
   description: string;
   features: string[];
@@ -25,7 +24,6 @@ interface Service {
 const SERVICES_DATA: Service[] = [
   {
     title: "Search Engine Optimization",
-    href: "/marketing/seo",
     icon: Search,
     description:
       "Improve your website's visibility in search results with our data-driven SEO strategies.",
@@ -37,7 +35,6 @@ const SERVICES_DATA: Service[] = [
   },
   {
     title: "Pay-Per-Click (PPC) Advertising",
-    href: "/marketing/ppc",
     icon: MousePointerClick,
     description:
       "Generate immediate traffic and leads with targeted PPC campaigns across platforms.",
@@ -49,7 +46,6 @@ const SERVICES_DATA: Service[] = [
   },
   {
     title: "Social Media Marketing",
-    href: "/marketing/social",
     icon: Share2,
     description:
       "Build your brand and engage your audience with effective social media strategies.",
@@ -61,7 +57,6 @@ const SERVICES_DATA: Service[] = [
   },
   {
     title: "Email Marketing",
-    href: "/marketing/email",
     icon: Mail,
     description:
       "Nurture leads and drive conversions with personalized email campaigns.",
@@ -73,7 +68,6 @@ const SERVICES_DATA: Service[] = [
   },
   {
     title: "Content Marketing",
-    href: "/marketing/content",
     icon: FileText,
     description:
       "Attract and retain your audience with high-quality, relevant content.",
@@ -85,7 +79,6 @@ const SERVICES_DATA: Service[] = [
   },
   {
     title: "Analytics & Reporting",
-    href: "/marketing/analytics",
     icon: BarChart2,
     description:
       "Make data-driven decisions with detailed analytics and performance reports.",
@@ -102,7 +95,7 @@ const ServiceCard = ({ service }: { service: Service }) => {
   const Icon = service.icon;
 
   return (
-    <div className="group relative overflow-hidden rounded-2xl bg-white p-8 border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+    <div className="group relative overflow-hidden rounded-1xl bg-white p-8 border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
 
       {/* spotlight hover */}
       <div className="pointer-events-none absolute -top-24 -right-24 h-48 w-48 rounded-full bg-[#F54E02]/10 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
@@ -125,20 +118,12 @@ const ServiceCard = ({ service }: { service: Service }) => {
       {/* features */}
       <ul className="relative space-y-3 mb-8">
         {service.features.map((feature, index) => (
-          <li key={index} className="flex items-start text-gray-800">
+          <li key={index} className="flex items-start text-gray-800 transition-all duration-300 hover:translate-x-2">
             <CheckCircle size={18} className="text-[#F54E02] mr-2 mt-1" />
             {feature}
           </li>
         ))}
       </ul>
-
-      {/* link */}
-      <Link
-        href={service.href}
-        className="relative text-sm font-medium text-[#F54E02] underline underline-offset-4 group-hover:tracking-wide transition-all"
-      >
-        Explore Service →
-      </Link>
     </div>
   );
 };
@@ -147,10 +132,11 @@ const ServiceCard = ({ service }: { service: Service }) => {
 export default function DigitalMarketingServicesSection() {
   return (
     <section className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-1xl mx-auto px-6 lg:px-18">
 
         {/* header */}
         <div className="text-center mb-16">
+            <span className="inline-block bg-[#ff4500] w-12 h-[3px] mb-2"></span>
           <h2 className="text-4xl font-bold text-black mb-3">
             Our Digital Marketing Services
           </h2>
@@ -169,7 +155,7 @@ export default function DigitalMarketingServicesSection() {
         {/* CTA */}
         <div className="text-center mt-20">
           <Link
-            href="#"
+            href="/contact"
             className="inline-block px-10 py-4 rounded-lg font-semibold text-lg bg-[#F54E02] text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
             Start Your Digital Growth

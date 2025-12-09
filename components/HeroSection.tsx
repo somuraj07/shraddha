@@ -13,8 +13,8 @@ export default function HeroSection({
     imageSrc = "/aboutus-section1-img-new.png"
 }) {
     return (
-        <section className="w-full bg-black py-20 px-40">
-            <div className="container mx-auto flex flex-col lg:flex-row items-center gap-10">
+        <section className=" bg-black py-30 h-180">
+            <div className="container mx-auto flex flex-col lg:flex-row items-center px-6 md:px-10 lg:px-16 max-w-8xl gap-10">
 
                 {/* LEFT CONTENT */}
                 <div className="flex-1 text-white">
@@ -53,8 +53,8 @@ export default function HeroSection({
                     <Image
                         src={imageSrc}
                         alt="Hero Section Image"
-                        width={550}
-                        height={400}
+                        width={650}
+                        height={450}
                         className="rounded-2xl object-cover"
                     />
                 </div>

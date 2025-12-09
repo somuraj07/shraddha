@@ -15,14 +15,15 @@ const Digital = () => {
         description="Strategic digital marketing solutions designed to increase your brand visibility, drive qualified traffic, and boost conversions for measurable business growth."
         primaryBtnText="Get a Free Consultation"
         primaryBtnLink="#"
-        imageSrc="/image_3bf70e.png"
+        imageSrc="/digital-top-right.jpg"
       />
 
       <DigitalMarketingServicesSection />
 
       {/* ================= RESULTS ================= */}
       <section className="bg-gray-50 py-24">
-        <div className="container mx-auto px-6 text-center">
+        <div className="container mx-auto px-6 lg:px-18 text-center">
+          <span className="inline-block bg-[#ff4500] w-12 h-[3px] mb-2"></span>
           <h2 className="text-4xl font-bold mb-12">
             Results That Drive Growth
           </h2>
