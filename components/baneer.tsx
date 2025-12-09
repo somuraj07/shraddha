@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function Banner() {
     return (
-        <section className="relative overflow-hidden py-5 min-h-[90vh] bg-black">
-            <div className="container px-5 ">
+        <section className="relative overflow-hidden py-25 min-h-[100vh] bg-black">
+            <div className="container px-6 ">
                 {/* BG Left */}
                 <div className="hidden md:block absolute top-0 left-0 z-[1]">
                     <Image

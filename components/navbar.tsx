@@ -171,9 +171,6 @@ export default function Navbar() {
           </Link>
         </ul>
       </aside>
-
-      {/* OFFSET */}
-      <div className="h-20" />
     </>
   );
 }
