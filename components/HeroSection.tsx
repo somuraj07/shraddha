@@ -15,7 +15,7 @@ export default function HeroSection({
     return (
        
 
-        <section className="w-full bg-black py-20 px-18">
+        <section className="w-full bg-black h-190 py-40 px-18">
             <div className="container mx-auto flex flex-col lg:flex-row items-center gap-10">
                 {/* LEFT CONTENT */}
                 <div className="flex-1 text-white">

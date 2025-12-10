@@ -45,6 +45,7 @@ const ServiceCard: React.FC<{ service: Service }> = ({ service }) => {
         hover:shadow-[0_0_25px_rgba(245,78,2,0.4)]
         hover:-translate-y-2
       "
+      id='services'
     >
       {/* Inner Card */}
       <div className="relative z-10 flex flex-col h-full">
