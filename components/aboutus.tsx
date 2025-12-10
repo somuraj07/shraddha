@@ -9,10 +9,6 @@ const PARTNER_DATA = [
     logoSrc: 'https://upload.wikimedia.org/wikipedia/en/e/eb/All_India_Council_for_Technical_Education_logo.png' 
   },
   { 
-    name: 'APSCHE Approved', 
-    logoSrc: 'https://apsche.ap.gov.in/img/APSCHE_Logo.jpg' 
-  },
-  { 
     name: 'Wipro Credential Partner', 
     logoSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/1200px-Wipro_Primary_Logo_Color_RGB.svg.png' 
   },
@@ -76,13 +72,13 @@ export default function AboutSection() {
           </div>
 
           <div 
-            className="flex flex-col items-center p-8 lg:p-10 rounded-xl shadow-lg w-full gap-6"
+            className="flex flex-col items-center p-8 lg:p-10 rounded-xl shadow-lg w-full gap-8"
             style={{ backgroundColor: CARD_SHADE }}
           >
             {PARTNER_DATA.map((partner, index) => (
               <div 
                 key={index} 
-                className="flex items-center w-full p-3 rounded-lg shadow-md bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                className="flex items-center w-full p-6 rounded-lg shadow-md bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
               >
                 <div className="w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">
                   <img

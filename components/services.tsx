@@ -79,17 +79,6 @@ const ServiceCard: React.FC<{ service: Service }> = ({ service }) => {
           ))}
         </ul>
 
-        {/* Button */}
-        <Link
-          href={service.href}
-          className="mt-auto px-6 py-3 text-center text-sm font-medium rounded-md border transition-all duration-200"
-          style={{ borderColor: BRAND_COLOR, color: BRAND_COLOR }}
-          onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = BRAND_COLOR; e.currentTarget.style.color = "white"; }}
-          onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.color = BRAND_COLOR; }}
-        >
-          Learn More
-        </Link>
-
       </div>
     </div>
   );
